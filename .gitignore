@@ -1,0 +1,11 @@
+.cardpattern-cargo-target/
+node_modules/
+dist/
+src-tauri/target/
+.codex-temp/
+excel/
+deploy/
+*.db
+md/response*.md
+src-tauri/icons/review/
+ 

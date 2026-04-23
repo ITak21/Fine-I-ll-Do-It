@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vault Ledger - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d3e4fe",
+              "secondary-container": "#d0e1fb",
+              "secondary-fixed-dim": "#b7c8e1",
+              "on-primary-fixed": "#001453",
+              "primary-fixed-dim": "#b8c4ff",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "surface-bright": "#f7f9fb",
+              "tertiary-container": "#00201d",
+              "background": "#f7f9fb",
+              "on-surface-variant": "#45464d",
+              "surface-variant": "#e0e3e5",
+              "on-primary": "#ffffff",
+              "tertiary": "#000000",
+              "surface-tint": "#3755c3",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b8c4ff",
+              "on-background": "#191c1e",
+              "primary-fixed": "#dde1ff",
+              "on-secondary-fixed": "#0b1c30",
+              "error": "#ba1a1a",
+              "outline-variant": "#c6c6cd",
+              "on-tertiary-container": "#0c9488",
+              "inverse-surface": "#2d3133",
+              "surface-container-high": "#e6e8ea",
+              "surface": "#f7f9fb",
+              "secondary": "#505f76",
+              "primary-container": "#001453",
+              "on-tertiary-fixed-variant": "#005049",
+              "on-primary-container": "#607cec",
+              "surface-container-low": "#f2f4f6",
+              "tertiary-fixed": "#89f5e7",
+              "on-tertiary-fixed": "#00201d",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "outline": "#76777d",
+              "surface-dim": "#d8dadc",
+              "inverse-on-surface": "#eff1f3",
+              "on-primary-fixed-variant": "#173bab",
+              "surface-container-lowest": "#ffffff",
+              "primary": "#000000",
+              "surface-container": "#eceef0",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#38485d",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "on-surface": "#191c1e",
+              "on-secondary-container": "#54647a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-100 p-4 gap-2 border-r border-slate-200 z-40">
+<div class="mb-8 px-2">
+<h1 class="text-lg font-black text-slate-900 font-headline">Vault Ledger</h1>
+<p class="text-xs font-semibold text-on-surface-variant font-label uppercase tracking-wider">Wealth Management</p>
+</div>
+<nav class="flex flex-col gap-1 grow">
+<a class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label text-sm font-semibold">Category Management</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-white text-blue-700 shadow-sm rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label text-sm font-semibold">Settings</span>
+</a>
+<button class="mt-4 mx-2 bg-primary-container text-on-primary-fixed font-semibold py-2 px-4 rounded-xl text-sm transition-all active:opacity-80">
+                Import Data
+            </button>
+</nav>
+<div class="flex flex-col gap-1 pt-4 border-t border-slate-200">
+<a class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-label text-sm font-semibold">Support</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label text-sm font-semibold">Log Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-16 px-10 w-full top-0 sticky z-30 bg-white shadow-sm font-body">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold tracking-tight text-slate-900 font-headline">Smart Card Ledger</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 hover:text-slate-800 text-sm font-medium transition-colors" href="#">Upload Excel</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium text-on-surface-variant">Monthly: October 2023</span>
+<button class="p-2 hover:bg-slate-100 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-600" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-100 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-600" data-icon="help_outline">help_outline</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man with a friendly expression against a neutral studio background, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-V5ai0zY6l6r2pImIAZgWTEU28410N9Nzk4IPYX8DGvnb2n_pFSLRYH_Vu_ZJ0psdoXFO5BrEn8Eja7H2xSu8X8sUEB3x-iTNJs7XOwbPTCKVdkUTWQ4Txe_iY25I2qK6DtThE1c7nmFMKLFSijQ6cdKYVyCMklMOgvIqp4mhTxaT2uQSVey6d7tDuvCXDNTu8vgRdpdZpKidTjUjHG4jdMozFFtEbVIK1r8VRE77Qnm6bwCc6o6TRx0redJUC-XstMusNEVDdhwy"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-10 max-w-7xl mx-auto w-full space-y-12">
+<!-- Header Section -->
+<section>
+<h2 class="text-4xl font-extrabold text-primary font-headline tracking-tight mb-2">Settings</h2>
+<p class="text-on-surface-variant text-lg">Configure your workspace and financial preferences.</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Category Management (Main Card) -->
+<div class="lg:col-span-8 space-y-8">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="text-2xl font-bold font-headline text-on-surface">Spending Categories</h3>
+<p class="text-sm text-on-surface-variant mt-1 font-body">Manage labels and visual identification for transactions.</p>
+</div>
+</div>
+<!-- Category List -->
+<div class="space-y-4">
+<!-- Category Row: Shopping -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-surface-dim transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-on-tertiary-container shadow-sm"></div>
+<span class="font-semibold text-on-surface font-body">Shopping</span>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="edit">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Row: Dining -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-surface-dim transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-on-primary-container shadow-sm"></div>
+<span class="font-semibold text-on-surface font-body">Dining</span>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="edit">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Row: Electricity -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-surface-dim transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-secondary-fixed-dim shadow-sm"></div>
+<span class="font-semibold text-on-surface font-body">Electricity</span>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="edit">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Row: Water -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-surface-dim transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-surface-tint shadow-sm"></div>
+<span class="font-semibold text-on-surface font-body">Water</span>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="edit">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Create New Category Area -->
+<div class="mt-10 p-6 bg-surface-container-high rounded-xl">
+<h4 class="text-sm font-bold text-on-surface uppercase tracking-wider mb-4 font-label">Create New Category</h4>
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-1">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-surface-tint font-body text-on-surface" placeholder="Category name (e.g. Travel)" type="text"/>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-lg">
+<span class="text-xs font-semibold text-on-surface-variant font-label">Pick Color:</span>
+<input class="w-8 h-8 rounded-full border-none cursor-pointer p-0 bg-transparent overflow-hidden" type="color" value="#3755c3"/>
+</div>
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg text-sm transition-all hover:opacity-90 active:scale-95">
+                                    Add Category
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Settings (Sidebar Cards) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Currency Settings -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<h3 class="text-xl font-bold font-headline text-on-surface mb-4">Currency</h3>
+<p class="text-xs text-on-surface-variant mb-6 font-body">Select your default reporting currency for all ledgers.</p>
+<div class="space-y-3">
+<label class="flex items-center justify-between p-3 rounded-lg border-2 border-surface-tint bg-secondary-container cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<span class="font-bold text-on-surface font-headline">USD</span>
+<span class="text-xs text-on-secondary-fixed-variant font-label">US Dollar ($)</span>
+</div>
+<span class="material-symbols-outlined text-surface-tint" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg border-2 border-transparent bg-surface-container-low hover:bg-surface-dim cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<span class="font-bold text-on-surface font-headline">EUR</span>
+<span class="text-xs text-on-surface-variant font-label">Euro (€)</span>
+</div>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg border-2 border-transparent bg-surface-container-low hover:bg-surface-dim cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<span class="font-bold text-on-surface font-headline">GBP</span>
+<span class="text-xs text-on-surface-variant font-label">British Pound (£)</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Backup Options -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed opacity-10 rounded-full -mr-16 -mt-16"></div>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-4">Data Integrity</h3>
+<p class="text-xs text-on-surface-variant mb-6 font-body">Automate your backups to ensure your financial history is never lost.</p>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="space-y-1">
+<p class="text-sm font-semibold text-on-surface font-body">Auto-Backup</p>
+<p class="text-[10px] text-on-surface-variant font-label">Sync daily to secure cloud</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-surface-tint"></div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-surface-container-low text-on-surface-variant font-bold py-3 rounded-lg text-sm border border-outline-variant hover:bg-surface-dim transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="cloud_download">cloud_download</span>
+                                Download Local Archive
+                            </button>
+<div class="p-4 bg-primary-container rounded-lg">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="info">info</span>
+<div class="space-y-1">
+<p class="text-xs font-bold text-on-primary-container font-body">Last backup</p>
+<p class="text-[10px] text-on-primary-container opacity-80 font-label">October 24, 2023 at 04:12 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Danger Zone -->
+<section class="mt-8 border-t border-outline-variant pt-12">
+<div class="bg-error-container/20 rounded-xl p-8 border border-error/10">
+<h3 class="text-xl font-bold font-headline text-error mb-2">Security &amp; Data Deletion</h3>
+<p class="text-sm text-on-surface-variant mb-6 max-w-2xl">Deleting your account will permanently remove all transaction history, categorization rules, and linked card metadata. This action cannot be undone.</p>
+<button class="bg-error text-white font-bold py-3 px-8 rounded-lg text-sm transition-all hover:opacity-90 active:scale-95">
+                        Permanently Delete Vault
+                    </button>
+</div>
+</section>
+</div>
+</main>
+</body></html>
