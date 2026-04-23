@@ -3,6 +3,7 @@ node_modules/
 dist/
 src-tauri/target/
 .codex-temp/
+ProjectDirectives.md
 excel/
 deploy/
 *.db
