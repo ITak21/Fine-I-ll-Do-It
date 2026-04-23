@@ -48,8 +48,10 @@ GitHub 레포지토리 이름은 `Fine-I-ll-Do-It`이고, 실제 앱 이름은 `
 
 가장 편한 사용 방식은 GitHub Releases에 업로드된 설치 파일을 내려받아 실행하는 것입니다.
 
-- 일반 사용자: `FIDI_x64-setup.exe` 형태의 설치 파일 권장
-- 관리자/배포 환경: `.msi` 설치 파일 사용 가능
+- `FIDI_0.1.0_x64_portable.zip`: 설치 없이 압축을 풀고 바로 실행하는 포터블 버전
+- `FIDI_0.1.0_x64_en-US.msi`: Windows 설치형 패키지
+
+포터블 버전은 설치 없이 바로 실행하고 싶은 경우에, `msi`는 일반적인 설치 과정을 통해 사용하고 싶은 경우에 적합합니다.
 
 아직 Releases를 만들기 전이라면 아래 방법으로 직접 실행할 수 있습니다.
 
@@ -84,10 +86,14 @@ npm run tauri build
 
 빌드가 끝나면 Windows 설치 파일은 보통 아래 경로에 생성됩니다.
 
+- 포터블 원본 실행 파일: `.cardpattern-cargo-target/release/card_pattern.exe`
 - `.cardpattern-cargo-target/release/bundle/nsis/`
 - `.cardpattern-cargo-target/release/bundle/msi/`
 
-이 파일들을 GitHub Releases에 첨부하면 다른 사람이 바로 다운로드해서 사용할 수 있습니다.
+GitHub Releases에는 보통 아래 두 파일을 올리면 바로 사용하기 쉽습니다.
+
+- `FIDI_0.1.0_x64_portable.zip`
+- `FIDI_0.1.0_x64_en-US.msi`
 
 ## 사용 흐름
 
@@ -166,7 +172,3 @@ export const sampleParser: CardParser = {
 
 아직 완성형이라기보다는 계속 확장해 나갈 수 있는 기반에 가깝습니다.  
 특히 카드사별 파서 기여가 쌓일수록 더 많은 사람이 바로 쓸 수 있는 도구가 될 것 같습니다.
-
-## 라이선스
-
-라이선스는 아직 지정하지 않았습니다. 공개 저장소로 운영할 예정이라면 `MIT` 같은 명시적인 라이선스를 추가하는 것을 권장합니다.
