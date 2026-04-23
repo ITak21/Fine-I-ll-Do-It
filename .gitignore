@@ -6,6 +6,8 @@ src-tauri/target/
 excel/
 deploy/
 *.db
-md/response*.md
+md/*
+!md/SQLiteSchema.md
+refference/
 src-tauri/icons/review/
  
